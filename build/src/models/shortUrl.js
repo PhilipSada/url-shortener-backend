@@ -10,7 +10,7 @@ const schema = new mongoose_1.default.Schema({
         unique: true,
         required: true
     },
-    preferredAlias: { type: String, unique: true, sparse: true },
+    preferredAlias: { type: String },
     destination: { type: String, required: true },
 });
 const ShortUrlModel = mongoose_1.default.model("shortUrl", schema);

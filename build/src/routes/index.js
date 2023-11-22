@@ -10,7 +10,7 @@ const routes = (app) => {
     app.get("/healthcheck", (req, res) => {
         return res.send("App is looking good");
     });
-    app.post("/api/url", (0, validateResource_1.default)(createShortUrl_1.default), shortUrlController_1.createShortUrl);
+    app.post("/shorten", (0, validateResource_1.default)(createShortUrl_1.default), shortUrlController_1.createShortUrl);
     app.get("/:identifier", shortUrlController_1.handleRedirect);
 };
 exports.default = routes;

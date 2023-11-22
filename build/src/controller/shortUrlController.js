@@ -26,7 +26,7 @@ function createShortUrl(req, res) {
                 if (existingUrl) {
                     return res
                         .status(400)
-                        .json({ error: "Preferred alias is already taken." });
+                        .json({ message: "Preferred alias is already taken." });
                 }
             }
             // Generate shortId using nanoid
@@ -48,7 +48,7 @@ function createShortUrl(req, res) {
         }
         catch (error) {
             console.error(error);
-            res.status(500).json({ error: "Internal server error." });
+            res.status(500).json({ message: "Internal server error." });
         }
     });
 }
